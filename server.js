@@ -54,15 +54,6 @@ app.post('/submit-form', async (req, res) => {
 
 
 
-    // Example: Logging the form data
-    console.log('First Name:', firstName);
-    console.log('Last Name:', lastName);
-    console.log('Email:', email);
-    console.log('Decade:', decade);
-    console.log('Language:', language);
-    console.log('Residence:', residence);
-    console.log('Continent:', continent);
-    console.log('Message:', message);
     const personalInfo = {
         first_name: firstName,
         last_name: lastName,
