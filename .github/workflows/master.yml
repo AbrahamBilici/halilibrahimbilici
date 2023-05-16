@@ -23,11 +23,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./halilibrahimbilici
+        working-directory: ./
 
       - name: Deploy to GitHub Pages
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
-          cd ./halilibrahimbilici
+          cd ./
           npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
