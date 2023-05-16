@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./halilibrahimbilici
 
       - name: Deploy to GitHub Pages
         env:
