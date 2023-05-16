@@ -14,14 +14,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          
       - name: Print current directory
         run: pwd
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./halilibrahimbilici
 
       - name: Deploy to GitHub Pages
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
-        run: npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
+        run: |
+          cd halilibrahimbilici
+          npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
