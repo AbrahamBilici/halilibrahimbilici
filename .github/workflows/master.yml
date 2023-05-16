@@ -18,13 +18,16 @@ jobs:
       - name: Print current directory
         run: pwd
 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Install dependencies
         run: npm install
-        working-directory: /home/runner/work/halilibrahimbilici/halilibrahimbilici
+        working-directory: ./halilibrahimbilici
 
       - name: Deploy to GitHub Pages
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
-          cd halilibrahimbilici
+          cd ./halilibrahimbilici
           npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
