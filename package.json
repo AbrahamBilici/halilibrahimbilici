@@ -18,5 +18,7 @@
     "mongodb": "^5.5.0",
     "mongodb-connection-string-url": "^2.0.0",
     "mongoose": "^7.1.1"
+  },"engines": {
+    "node": ">=16.0.0"
   }
 }
