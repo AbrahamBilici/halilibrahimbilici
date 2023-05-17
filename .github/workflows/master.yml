@@ -28,6 +28,4 @@ jobs:
       - name: Deploy to GitHub Pages
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
-        run: |
-          cd ./
-          npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
+        run: npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
