@@ -14,15 +14,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          
+      - name: Print current directory
+        run: pwd
 
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build static files
-        run: npm run build
+        working-directory: ./
 
       - name: Deploy to GitHub Pages
         env:
