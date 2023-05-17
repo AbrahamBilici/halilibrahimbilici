@@ -2,6 +2,7 @@
   "name": "modifing-website",
   "version": "1.0.0",
   "description": "This is Abraham Bilici's website",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node server.js",
