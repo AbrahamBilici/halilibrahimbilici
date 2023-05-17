@@ -14,24 +14,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          
-      - name: Print current directory
-        run: pwd
 
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./
 
       - name: Build static files
         run: npm run build
-        working-directory: ./
-
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MONGO_URI }}
-          publish_dir: ./public
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: npm run deploy -- --mongo-uri ${{ secrets.MONGO_URI }}
