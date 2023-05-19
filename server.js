@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
+const port = process.env.PORT || 8080;
 
 
 app.use(cors());
@@ -83,4 +84,8 @@ app.post('/submit', async (req, res) => {
 });
 
 
-module.exports = app;
+
+
+app.listen(port, () => {
+    console.log(`Server is runnuing on port ${port}`)
+})
