@@ -11,7 +11,7 @@ app.use(express.static(__dirname));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/contact.html', (req, res) => {
-    const filePath = __dirname + 'contact.html';
+    const filePath = __dirname + '/contact.html';
     res.sendFile(filePath);
 });
 
