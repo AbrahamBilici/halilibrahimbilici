@@ -1,6 +1,6 @@
 {
   "name": "modifing-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is Abraham Bilici's website",
   "main": "server.js",
   "scripts": {
