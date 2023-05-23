@@ -16,7 +16,10 @@ jobs:
          node-version: 16.x    
       - run: npm ci
         working-directory: ./    
-      - run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }}
+      - name: build
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }}
       - run: npm test
         env:
           CI: true         
