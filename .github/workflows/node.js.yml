@@ -23,6 +23,11 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+    - run: pwd       
+      working-directory: ./    
     - run: npm ci
-    - run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }} --if-present 
+    - name: build
+      env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+      run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }} --if-present 
     - run: npm test
