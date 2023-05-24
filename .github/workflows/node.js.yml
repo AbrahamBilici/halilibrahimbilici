@@ -23,6 +23,8 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+    - name: MongoDB Action
+      uses: SusanDoggie/mongodb-action@0.0.1    
     - run: pwd       
       working-directory: ./    
     - run: npm ci
