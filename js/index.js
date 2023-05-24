@@ -47,7 +47,8 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         errorMessage.style.display = "block";
     }
     // Prepare and send the request
-    var formData = new FormData(this);
+    const form = event.target;
+    const formData = new FormData(form);
     var data = {};
     formData.forEach(function (value, key) {
         data[key] = value;
