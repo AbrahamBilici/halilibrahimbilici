@@ -27,6 +27,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: echo ${{ secrets.MONGO_URI }}
-    - run: npm run build --if-present
+    - run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }} --if-present 
     - run: npm test
