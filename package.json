@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "build": "node server.js",
+    "build": "node server.js && npm run test",
     "deploy": "node server.js",
     "start": "node server.js"
   },
