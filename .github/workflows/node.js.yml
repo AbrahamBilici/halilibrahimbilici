@@ -23,13 +23,18 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-    - name: MongoDB Action
-      uses: SusanDoggie/mongodb-action@0.0.1    
+    - name: MongoDB in GitHub Actions
+      uses: supercharge/mongodb-github-action@1.9.0
+      with:
+        mongodb-version: '4.4'
     - run: pwd       
       working-directory: ./    
     - run: npm ci
+    - run: npm install
     - name: build
       env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
       run: npm run build -- --mongo-uri ${{ secrets.MONGO_URI }} --if-present 
     - run: npm test
+      env:
+        CI: true
