@@ -73,6 +73,8 @@ app.post('/submit', async (req, res) => {
         await user.save();
         // Send a response to the client
         res.json({ success: true });
+        res.sendStatus(200)
+
 
     } catch (err) {
         console.log(err);
