@@ -45,11 +45,11 @@ const contactSchema = new mongoose.Schema({
     message: String
 });
 
-const User = mongoose.model('User', contactSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
 // post
 
-app.post('/halilibrahimbilici/submit', async (req, res) => {
+app.post('/contact.html', async (req, res) => {
     const { firstName, lastName, email, decade, language, residence, continent, message } = req.body;
 
 
@@ -65,15 +65,14 @@ app.post('/halilibrahimbilici/submit', async (req, res) => {
 
 
     try {
-        const user = new User({
+        const user = new Contact({
             personal_info: personalInfo,
             region: continent,
             message: message
         });
         await user.save();
         // Send a response to the client
-        res.json({ success: true });
-        res.sendStatus(200)
+        res.status(200).json({ success: true });
 
 
     } catch (err) {
