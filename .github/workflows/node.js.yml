@@ -8,9 +8,6 @@ on:
 env:
   MONGO_URI: ${{ secrets.MONGO_URI }}
 
-permissions: 
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
