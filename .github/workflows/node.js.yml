@@ -40,7 +40,8 @@ jobs:
       with:
         name: node-apprun
         path: .    
-
+    - name: Build
+      run: yarn build
 
   deploy:
     permissions:
