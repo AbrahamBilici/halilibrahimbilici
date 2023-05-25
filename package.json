@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "build": "npm start",
-    "deploy": "gh-pages -d .",
+    "build": "node server.js",
+    "deploy": "node server.js",
     "start": "node server.js"
   },
   "author": "Halil Ibrahim Bilici",

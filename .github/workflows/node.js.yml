@@ -15,9 +15,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ./
-
     - name: npm install
       run: npm install
 
@@ -32,7 +29,10 @@ jobs:
         mongodb-version: '4.4'
 
     - run: pwd       
-      working-directory: ./      
+      working-directory: ./    
+      
+    - uses: actions/checkout@v3
+    - uses: build
                  
    
  
