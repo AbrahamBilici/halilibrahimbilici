@@ -49,7 +49,7 @@ const User = mongoose.model('User', contactSchema);
 
 // post
 
-app.post('/submit', async (req, res) => {
+app.post('/halilibrahimbilici/submit', async (req, res) => {
     const { firstName, lastName, email, decade, language, residence, continent, message } = req.body;
 
 
