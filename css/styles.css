@@ -54,10 +54,13 @@ html {
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
-    margin: 0;
+    margin: 0 auto;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+
 
 }
 
@@ -87,7 +90,7 @@ strong {
 }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-linear);
     outline-offset: 3px;
 }
 
@@ -593,25 +596,17 @@ header {
     display: inline-block;
     text-align: center;
     width: 100%;
-}
-
-.footer__link {
-
     font-weight: var(--fw-bold);
-    color: var(--clr-accent);
-    text-decoration: none;
-
-
 }
 
-.footer__link:hover,
+
+
+.footer-link:hover,
 .social-list__link:hover {
     opacity: 0.7;
 }
 
-.footer__link:hover {
-    text-decoration: underline;
-}
+
 
 .social-list {
     list-style: none;
@@ -641,22 +636,7 @@ header {
 }
 
 
-/* contact */
 
-.contact {
-    background: var(--clr-dark);
-    background-blend-mode: multiply;
-    color: var(--clr-light);
-    font-weight: var(--fw-reg);
-    font-family: var(--ff-secondary);
-    margin-left: 200px;
-    margin-right: 200px;
-    max-width: 100%;
-}
-
-.sumbit {
-    text-align: center;
-}
 
 
 /* Resume */
@@ -694,20 +674,29 @@ header {
 
 
     body {
-        font-size: 0.875rem;
         display: inline-block;
-        width: auto;
-
+        overflow-x: hidden
     }
 
 
+    .mybody {
+        overflow-x: hidden;
+
+
+    }
 
 
     .nav__list {
+        list-style: none;
+        display: flex;
+        height: 100%;
         flex-direction: column;
-
+        justify-content: space-evenly;
+        align-items: right;
+        margin: auto;
+        margin-left: 10px;
+        padding: 10px;
     }
-
 
     .header__img {
         width: 80px;
@@ -719,18 +708,16 @@ header {
         display: inline-block;
         width: auto;
 
+
     }
 
-    .mybody {
-        display: inline-block;
-        width: auto;
-    }
+
 
 
     .shortcuts {
-        margin-left: auto;
+        margin: 0;
         display: inline-block;
-        width: auto;
+
     }
 
 
@@ -765,7 +752,7 @@ header {
     header {
 
         display: inline-block;
-        width: auto;
+        width: 70%;
 
     }
 
@@ -773,6 +760,7 @@ header {
 
     .my-services {
         padding: 40px 20px;
+        width: 70%;
     }
 
     .my-work {
@@ -824,9 +812,6 @@ header {
         margin-top: 100px;
     }
 
-    .footer {
-        margin: auto
-    }
 
     .nav-open nav {
         margin-right: 200px;
@@ -841,7 +826,83 @@ header {
 
     .contact {
         margin-left: 0;
+        width: 70%;
+    }
+
+
+
+}
+
+.container-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.form-h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+legend {
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #555;
+    transform: scale(1.01);
+}
+
+/* contact */
+
+.contact {
+    background-image: url('https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/math-curriculum.jpg?fit=1200%2C900&ssl=1');
+}
+
+@media screen and (max-width: 600px) {
+    .container-form {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
 
     }
 
+    input[type="submit"] {
+        width: auto;
+    }
 }

@@ -19,44 +19,46 @@
      <link rel="stylesheet" href="css/styles.css">
 </head>
 <body> 
-    <!-- Header -->
-    
+  <div class="mybody">
+
+    <!-- Header -->    
     <header>
-        <div class="shortcuts">
-            <img src="img/HalilIbrahimBilici.jpg" alt="Ibrahim's picture" class="header__img" title="H. Ibrahim Bilici" loading="lazy">
-            
-            <figure class="song">
-               <audio controls
-               src="audio/havanagila.m4a"
-               title="Hava Nagila"
-               autoplay
-               >
-                <a href="audio/havanagila.m4a">download Audio</a>
-              </audio>          
-            </figure>
-            <nav class="shortcut">
-                <ul class="shortcut__list">
-                    <li class="shortcut__item"><a href="resume.html" class="shortcut__link btn">Resume</a></li>
-                    <li class="shortcut__item"><a href="portfolio-item.html" class="shortcut__link btn">Portfolio</a></li>
-                    <li class="shortcut__item"><a href="contact.html" class="shortcut__link btn">Contact</a></li>
-                </ul>
-            </nav>
-            
-        </div>
-        <div class="logo">            
-            <button  class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>    
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="index.html#services" class="nav__link">My services</a></li>
-                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="index.html#work" class="nav__link">My work</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <div class="shortcuts">
+          <img src="img/HalilIbrahimBilici.jpg" alt="Ibrahim's picture" class="header__img" title="H. Ibrahim Bilici" loading="lazy">
+          
+          <figure class="song">
+             <audio controls
+             src="audio/havanagila.m4a"
+             title="Hava Nagila"
+             autoplay
+             >
+              <a href="audio/havanagila.m4a">download Audio</a>
+            </audio>          
+          </figure>
+          <nav class="shortcut">
+              <ul class="shortcut__list">
+                  <li class="shortcut__item"><a href="resume.html" class="shortcut__link btn">Resume</a></li>
+                  <li class="shortcut__item"><a href="portfolio-item.html" class="shortcut__link btn">Portfolio</a></li>
+                  <li class="shortcut__item"><a href="contact.html" class="shortcut__link btn">Contact</a></li>
+              </ul>
+          </nav>
+          
+      </div>
+      <div class="logo">            
+          <button  class="nav-toggle" aria-label="toggle navigation">
+              <span class="hamburger"></span>    
+          </button>
+          <nav class="nav">
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                  <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
+                  <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                  <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+ <hr>
     <!-- Main -->
 <main>
 
@@ -75,7 +77,8 @@
 
 <!-- Contact Me-->
 <section class="contact" id="contact">
-    <h2 class="section__title section__title--contact">Contact Me</h2>
+  <div class="container-form">
+    <h2 class="form-h2">Contact Me</h2>
     
     <form id="contact-form" action="/submit" method="POST" >
         <fieldset>
@@ -214,10 +217,10 @@
         ></textarea>
       </fieldset>
       <br>
-      <fieldset class="sumbit">
-      <button class="btn" type="submit">Submit</button>
-      
-      <button class="btn" type="reset">Reset</button>
+      <fieldset class="submit">
+      <button  type="submit">Submit</button>      
+      <button  type="reset">Reset</button>
+
     </fieldset>
 
     <fieldset>
@@ -232,7 +235,7 @@
       </div>
     </fieldset>
       </form>
-
+    </div>
     </section>
     <p class="back__top"><a href="#" class="btn">Back to top</a>
     </p>
@@ -252,7 +255,7 @@
              
             </ul>
             </footer>
-      
+          </div>
             <script src="js/index.js"></script> 
     </body>
     </html>
