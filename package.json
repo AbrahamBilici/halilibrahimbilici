@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "build": "npm start",
-    "deploy": "node server.js",
+    "deploy": "gh-pages -d .",
     "start": "node server.js"
   },
   "author": "Halil Ibrahim Bilici",
@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "gh-pages": "^5.0.0",
     "mongodb": "^5.5.0",
     "mongodb-connection-string-url": "^2.0.0",
     "mongoose": "^7.1.1"
