@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "build": "node server.js",
-    "deploy": "node server.js",
+    "deploy": "npm start",
     "start": "node server.js"
   },
   "author": "Halil Ibrahim Bilici",

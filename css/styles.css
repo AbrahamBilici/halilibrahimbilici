@@ -894,6 +894,7 @@ button[type="reset"]:hover {
     background-image: url('https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/math-curriculum.jpg?fit=1200%2C900&ssl=1');
 }
 
+
 @media screen and (max-width: 600px) {
     .container-form {
         max-width: 100%;
