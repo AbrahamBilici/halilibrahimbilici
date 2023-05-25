@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     // Perform AJAX request
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/contact.html', true);
+    xhr.open('POST', '/halilibrahimbilici/contact.html', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {

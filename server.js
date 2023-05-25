@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.static(__dirname));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.get('/contact.html', (req, res) => {
+app.get('/halilibrahimbilici/contact.html', (req, res) => {
     const filePath = __dirname + '/contact.html';
     res.sendFile(filePath);
 });
@@ -49,7 +49,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 // post
 
-app.post('/contact.html', async (req, res) => {
+app.post('/halilibrahimbilici/contact.html', async (req, res) => {
     const { firstName, lastName, email, decade, language, residence, continent, message } = req.body;
 
 
