@@ -19,7 +19,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     // Perform AJAX request
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://abrahambilici.github.io//halilibrahimbilici/submit', true);
+    xhr.open('POST', 'https://abrahambilici.github.io/halilibrahimbilici/submit', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
