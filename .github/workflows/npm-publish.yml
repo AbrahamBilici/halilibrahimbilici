@@ -9,6 +9,7 @@ on:
 
 env:
    MONGO_URI: ${{ secrets.MONGO_URI }} 
+   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
 jobs:
   build:
