@@ -1,0 +1,20 @@
+name: deployment
+
+on: [push]
+
+jobs: 
+ deployment:
+  runs-on: ubuntu-latest
+  environment: MONGO_URI
+  concurrency: production
+  steps: 
+   - uses: actions/checkout@v3
+   - uses: actions/setup-node@v3
+     with:
+      node-version: '16.x'
+   - run: npm install -g
+   - name: Node to GH
+     uses: FdelMazo/node-to-gh-action@v2
+   - run: node server.js
+
+   
