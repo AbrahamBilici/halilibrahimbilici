@@ -1,20 +1,36 @@
 name: deployment
 
-on: [push]
-  
-jobs: 
- deployment:
-  runs-on: ubuntu-latest
-  concurrency: production
-  steps: 
-   - uses: actions/checkout@v3
-   - uses: actions/setup-node@v3
-     with:
-      node-version: '16.x'
-   - run: npm install -g
-   - run: pwd
-     working-directory: ./
-   - name: Node to GH
-     uses: FdelMazo/node-to-gh-action@v2
-   - run: node server.js 
-   
+on:
+  push:
+    branches:
+      - master
+
+env:
+  MONGO_URI: ${{ secrets.MONGO_URI }}
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Print working directory
+        run: pwd
+
+      - name: Node to GH
+        uses: FdelMazo/node-to-gh-action@v2
+
+      - name: Run server.js
+        run: node server.js
+
