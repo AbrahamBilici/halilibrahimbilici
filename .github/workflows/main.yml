@@ -13,6 +13,7 @@ jobs:
       node-version: '16.x'
    - run: npm install -g
    - run: pwd
+     working-directory: ./
    - name: Node to GH
      uses: FdelMazo/node-to-gh-action@v2
    - run: node server.js 
