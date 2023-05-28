@@ -32,11 +32,11 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         errorMessage.style.display = "block";
     }
     // Prepare and send the request
-    const form = event.target;
-    const formData = new FormData(form);
-    var data = {};
-    formData.forEach(function (value, key) {
-        data[key] = value;
-    });
-    xhr.send(JSON.stringify(data));
+    // const form = event.target;
+    // const formData = new FormData(form);
+    // var data = {};
+    //  formData.forEach(function (value, key) {
+    //      data[key] = value;
+    //   });
+    //  xhr.send(JSON.stringify(data));
 });
