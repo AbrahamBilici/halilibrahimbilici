@@ -28,9 +28,6 @@ jobs:
       - name: Print working directory
         run: pwd
 
-      - name: Node to GH
-        uses: FdelMazo/node-to-gh-action@v2
-
       - name: Run server.js
         run: node server.js
 

@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
-
+const http = require('http'); // new
 
 app.use(cors());
 app.use(express.static(__dirname));
@@ -85,8 +85,10 @@ app.post('/halilibrahimbilici/contact.html', async (req, res) => {
 
 
 
+//server 
 
+const server = http.createServer(app);
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+server.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 });
