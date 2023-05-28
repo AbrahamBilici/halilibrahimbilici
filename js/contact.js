@@ -39,4 +39,5 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     //      data[key] = value;
     //   });
     //  xhr.send(JSON.stringify(data));
+
 });
