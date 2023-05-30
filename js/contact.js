@@ -31,7 +31,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         var errorMessage = document.getElementById("error-message");
         errorMessage.style.display = "block";
     }
-     Prepare and send the request
+   //  Prepare and send the request
      const form = event.target;
      const formData = new FormData(form);
      var data = {};
