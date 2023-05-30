@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     // Perform AJAX request
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/halilibrahimbilici/contact.html', true);
+    xhr.open('POST', 'https://abrahambilici.github.io/halilibrahimbilici/contact.html', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -31,13 +31,13 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         var errorMessage = document.getElementById("error-message");
         errorMessage.style.display = "block";
     }
-    // Prepare and send the request
-    // const form = event.target;
-    // const formData = new FormData(form);
-    // var data = {};
-    //  formData.forEach(function (value, key) {
-    //      data[key] = value;
-    //   });
-    //  xhr.send(JSON.stringify(data));
+     Prepare and send the request
+     const form = event.target;
+     const formData = new FormData(form);
+     var data = {};
+     formData.forEach(function (value, key) {
+         data[key] = value;
+      });
+      xhr.send(JSON.stringify(data));
 
 });
