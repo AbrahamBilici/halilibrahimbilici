@@ -534,7 +534,6 @@ header {
 
 
 
-
 .portfolio__item {
     background: var(--clr-light);
     color: red;
@@ -543,12 +542,15 @@ header {
     text-decoration: none;
     max-width: 100%;
     font-size: var(--fs-body);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 40px;
-
     height: 400px;
 
 }
+
+
 
 .portfolio__img {
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
