@@ -525,6 +525,10 @@ header {
     padding: 20px;      /* New - Add breathing space */
 }
 
+.about-me__body p {
+    line-height: 1.7;
+}
+
 /* My work */
 
 .my-work {
