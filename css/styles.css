@@ -519,6 +519,10 @@ header {
 .about-me__body {
     font-weight: var(--fw-reg);
     font-family: var(--ff-secondary);
+    max-width: 600px; /* New - Limit the width */
+    margin: 0 auto;    /* New - Center horizontally */
+    text-align: center; /* New - Center text nicely */
+    padding: 20px;      /* New - Add breathing space */
 }
 
 /* My work */
